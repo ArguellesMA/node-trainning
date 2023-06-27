@@ -8,7 +8,7 @@ RUN apt-get install -y curl make g++
 RUN curl -sL https://deb.nodesource.com/setup_16.x | bash -
 RUN apt-get install -y nodejs
 # Install required npm packages.
-ADD package.json /package.json
+ADD . /
 RUN npm install
 # Set /src as the working directory for this container.
 WORKDIR /src
